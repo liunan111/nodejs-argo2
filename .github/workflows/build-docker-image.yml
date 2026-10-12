@@ -1,3 +1,7 @@
+permissions:
+  contents: read
+  packages: write
+
 name: Build and Push Docker Image
 
 on:
@@ -39,7 +43,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/${{ github.repository_owner }}/feng:2026
+            ghcr.io/${{ github.repository_owner }}/nodejs-argo2:2026
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.description=HTTP Server
